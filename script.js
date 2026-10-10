@@ -5,20 +5,28 @@ let currentSong = new Audio();
 let play = document.querySelector("#play");
 
 async function getsongs() {
-  let a = await fetch("http://127.0.0.1:5500/songs/");
-  let response = await a.text();
+  songs = [
+    "songs/03 - Tum Ho Toh.mp3",
+    "songs/For A Reason - Karan Aujla (DJJOhAL.Com).mp3",
+    "songs/Pehle Bhi Main.mp3",
+  ];
 
-  let div = document.createElement("div");
-  div.innerHTML = response;
-  let as = div.getElementsByTagName("a");
 
-  let songs = [];
-  for (let index = 0; index < as.length; index++) {
-    const element = as[index];
-    if (element.href.endsWith(".mp3")) {
-      songs.push(element.href);
-    }
-  }
+
+  // let a = await fetch("http://127.0.0.1:5500/songs/");
+  // let response = await a.text();
+
+  // let div = document.createElement("div");
+  // div.innerHTML = response;
+  // let as = div.getElementsByTagName("a");
+
+  // let songs = [];
+  // for (let index = 0; index < as.length; index++) {
+  //   const element = as[index];
+  //   if (element.href.endsWith(".mp3")) {
+  //     songs.push(element.href);
+  //   }
+  // }
 
   for (let song of songs) {
     let finalsong1 = song.split("/").pop();
