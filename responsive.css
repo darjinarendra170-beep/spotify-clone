@@ -1,0 +1,192 @@
+
+.left,
+.right,
+.card,
+.playbar {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Playbar ke peeche content na chhupe */
+.spotifyPlaylists {
+  padding-bottom: 90px;
+}
+
+/* ---------- Large tablets / small laptops (<= 1024px) ---------- */
+@media (max-width: 1024px) {
+  .left {
+    width: 32vw;
+  }
+  .right {
+    width: 68vw;
+  }
+  .card {
+    width: 200px;
+  }
+  .playbar {
+    width: 64%;
+  }
+  .play {
+    right: 16px;
+    bottom: 60px;
+  }
+}
+
+/* ---------- Tablets / phones (<= 768px) ---------- */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .left {
+    padding: 5px;
+  }
+
+  .right {
+    margin: 0;
+    padding-bottom: 10px;
+  }
+
+  /* Library ko chhota karo */
+  .library {
+    min-height: auto;
+    padding-bottom: 60px;
+  }
+  .songslist {
+    height: 220px;
+  }
+  .songslist .info {
+    width: 120px;
+  }
+  .playnow {
+    width: auto;
+  }
+  .playnow span {
+    display: none; /* sirf icon dikhega */
+  }
+
+  /* Footer ko normal flow me laao */
+  .footer {
+    position: static;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    padding: 10px 0 0;
+  }
+
+  /* Header */
+  .header > * {
+    padding: 12px;
+  }
+  .buttons > * {
+    margin: 0 6px;
+  }
+  .signupbtn {
+    font-size: 14px;
+  }
+  .loginbtn {
+    width: 70px;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  /* Cards: 2 per row */
+  .spotifyPlaylists h1 {
+    font-size: 22px;
+    padding: 0 10px;
+  }
+  .cardContainer {
+    max-height: 55vh;
+    padding: 0 10px;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  .card {
+    width: calc(50% - 5px);
+  }
+  .card h2 {
+    font-size: 15px;
+  }
+  .card p {
+    font-size: 12px;
+  }
+  .play svg {
+    width: 40px;
+    height: 40px;
+  }
+  .play {
+    right: 14px;
+    bottom: 58px;
+  }
+
+  /* Playbar: poori width, screen ke neeche */
+  .playbar {
+    left: 0;
+    width: 100%;
+    border-radius: 0;
+    height: auto;
+    padding: 10px 12px 18px;
+  }
+  .abovebar {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+  }
+  .songinfo {
+    max-width: 35%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .songbuttons {
+    gap: 8px;
+  }
+  .seekbar {
+    width: calc(100% - 24px);
+    bottom: 6px;
+  }
+}
+
+/* ---------- Small phones (<= 480px) ---------- */
+@media (max-width: 480px) {
+  .home ul li {
+    padding-top: 10px;
+  }
+  .logo img {
+    width: 100px;
+  }
+  .songslist {
+    height: 180px;
+  }
+  .songslist ul li {
+    gap: 10px;
+    padding: 10px;
+  }
+  .songslist .info {
+    width: 90px;
+  }
+  .card {
+    padding: 8px;
+  }
+  .songtime {
+    display: none; /* jagah bachane ke liye */
+  }
+  .songinfo {
+    max-width: 45%;
+  }
+}
+
+/* ---------- Touch devices: hover nahi hota, isliye play button dikhao ---------- */
+@media (hover: none) {
+  .play {
+    opacity: 1;
+  }
+}

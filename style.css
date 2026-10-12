@@ -246,6 +246,8 @@ body {
 .abovebar{
   display:flex;
   justify-content:space-between;
+  position: relative;
+  bottom:8px;
 }
 
 
